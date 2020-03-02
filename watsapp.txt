@@ -1,0 +1,67 @@
+import 'package:flutter/material.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar:AppBar(
+          title:Text("WhatsApp                                                           :"),
+          backgroundColor: Colors.green[500],
+        ),
+
+        body:Column(
+          children: <Widget>[
+            Container(
+              color: Colors.green[500],
+              height: 60.0,
+              child: Row(
+
+
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Icon(Icons.camera_alt),
+                  Text("CHATS",style:TextStyle(fontSize:25.0),),
+                  Text('STATUS',style:TextStyle(fontSize:25.0),),
+                  Text('CALLS',style:TextStyle(fontSize:25.0),)
+                ],
+              ),
+            ),
+            Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text("Basangouda"),
+                  subtitle: Text("Typing...",style:TextStyle(color:Colors.greenAccent)),
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.white,
+                  ),
+                trailing: Text("2:00"),
+                ),
+                ListTile(
+                  title: Text("Abhishek"),
+                  subtitle: Text("✓ ",style:TextStyle(color:Colors.blueAccent)),
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.white,
+                  ),
+                  trailing: Text("3:00"),
+                ),
+                ListTile(
+                  title: Text("Sammya"),
+                  subtitle: Text("kya karra bey?"),
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.white,
+                  ),
+                  trailing: Text("4:00"),
+                ),
+              ],
+            )
+
+          ],
+        ),
+      ),
+    );
+  }
+}
